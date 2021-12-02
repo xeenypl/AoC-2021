@@ -1,12 +1,5 @@
 import Data.List
 
--- Part I
-solve :: String -> Int
-solve xs = snd $ foldl fn (head ints, 0) $ ints
-    where ints = map read $ lines xs :: [Int]
-          fn (last, acc) x | x > last  = (x, acc + 1)
-                           | otherwise = (x, acc)
-
 -- Part II
 solve' :: String -> Int
 solve' xs = snd $ foldl fn (head ints, 0) $ ints
